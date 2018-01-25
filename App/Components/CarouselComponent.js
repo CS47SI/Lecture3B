@@ -1,7 +1,17 @@
+/*
+*
+* React Native Demo app for Lecture 3B.
+* Debugging and Third Party Components
+*
+* CS47SI
+* Jan, 2017
+*/
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { Metrics } from '../Themes'
+
 import Carousel from 'react-native-snap-carousel';
 import SliderEntry from './SliderEntry'
 import { slideHeight, sliderWidth, itemWidth } from './Styles/SliderEntry.style';

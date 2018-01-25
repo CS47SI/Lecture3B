@@ -1,3 +1,14 @@
+/*
+*
+* React Native Demo app for Lecture 3B.
+* Debugging and Third Party Components
+*
+* From react-native-snap-carousel
+*
+* CS47SI
+* Jan, 2017
+*/
+
 import { StyleSheet, Dimensions, Platform } from 'react-native';
 import { Colors } from '../../Themes';
 

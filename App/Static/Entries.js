@@ -1,3 +1,12 @@
+/*
+*
+* React Native Demo app for Lecture 3B.
+* Debugging and Third Party Components
+*
+* CS47SI
+* Jan, 2017
+*/
+
 export const ENTRIES1 = [
   {
       title: 'Beautiful and dramatic Antelope Canyon',

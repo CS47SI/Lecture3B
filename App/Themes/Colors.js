@@ -1,3 +1,12 @@
+/*
+*
+* React Native Demo app for Lecture 3B.
+* Debugging and Third Party Components
+*
+* CS47SI
+* Jan, 2017
+*/
+
 const colors = {
   background: '#1F0808',
   clear: 'rgba(0,0,0,0)',

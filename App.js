@@ -1,39 +1,36 @@
+/*
+*
+* App.js of React Native Demo app for Lecture 3B.
+* Debugging and Third Party Components
+*
+* CS47SI
+* Jan, 2017
+*/
+
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import Unsplash, { toJson } from 'unsplash-js/native';
-import AppConfig from './App/Config/AppConfig'
-import { material } from 'react-native-typography'
 
 import CarouselComponent from './App/Components/CarouselComponent'
 
-const unsplash = new Unsplash({
-  applicationId: AppConfig.appId,
-  secret: AppConfig.secretKey,
-  callbackUrl: AppConfig.callbackUrl,
-  bearerToken: '18e21651ed762f1abed497b5a8b4b3f5704a7c6e55d63bc423b48e5153c9eaa7'
-});
+import * as Animatable from 'react-native-animatable';
+import IconsComponent from './App/Components/IconsComponent'
+import { material } from 'react-native-typography'
+
 
 export default class App extends React.Component {
 
-  state =  {
-    entries: [{title:'Hello!'},{title:'World!'}]
+  state = {
+    buttonValue: "Press a button above!"
   }
 
-  componentDidMount() {
-
-    //this.getPhotos();
-  }
-
-  getPhotos = () => {
-    unsplash.users.photos("vorosbenisop", 1, 10, "popular", false)
-    .then(toJson)
-    .then(json => {
-
-      console.log(json);
-    });
+  buttonPressed = (name) => {
+    console.log(`Button Pressed... ${name}`);
+    this.setState({ buttonValue: name });
   }
 
   render() {
+
+    const { buttonValue } = this.state;
 
     return (
       <View style={styles.container}>
@@ -48,6 +45,9 @@ export default class App extends React.Component {
           <Text style={material.body1}>Regular 14</Text>
           <Text style={material.caption}>Regular 12</Text>
           <Text style={material.button}>Medium 14</Text>
+
+          <IconsComponent onClick={this.buttonPressed} />
+          <Animatable.Text animation="pulse" easing="ease-out" iterationCount="infinite">{buttonValue}</Animatable.Text>
 
       </View>
     );

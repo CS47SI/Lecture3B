@@ -1,3 +1,14 @@
+/*
+*
+* React Native Demo app for Lecture 3B.
+* Debugging and Third Party Components
+*
+* From react-native-snap-carousel
+*
+* CS47SI
+* Jan, 2017
+*/
+
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
